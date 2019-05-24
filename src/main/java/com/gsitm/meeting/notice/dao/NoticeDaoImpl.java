@@ -21,5 +21,25 @@ public class NoticeDaoImpl implements NoticeDao{
 	public List<Notice> noticeList() {
 		return session.selectList(namespace + ".noticeList");
 	}
+
+	@Override
+	public Notice noticeRead(int noticeNum) {
+		return session.selectOne(namespace + ".noticeRead", noticeNum) ;
+	}
+
+	@Override
+	public void noticeInsert(Notice notice) {
+		session.insert(namespace + ".noticeInsert", notice);
+	}
+
+	@Override
+	public int noticeDelete(int noticeId) {
+		return session.delete(namespace + ".noticeDelete", noticeId);
+	}
+
+	@Override
+	public void noticeUpdate(Notice notice) {
+		session.update(namespace + ".noticeUpdate", notice);
+	}
 	
 }
