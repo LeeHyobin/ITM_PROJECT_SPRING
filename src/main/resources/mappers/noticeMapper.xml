@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 게시판 네임스페이스(사용영역) 설정 -->
+<mapper namespace="com.gsitm.meeting.mappers.noticeMapper">
+	
+	<select id="noticeList" resultType="notice">
+		select notice_id noticeId, notice_title noticeTitle, notice_content noticeContent, notice_writer noticeWriter, notice_date noticeDate from notice
+	</select>
+	
+</mapper>
