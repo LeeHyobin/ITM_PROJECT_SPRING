@@ -15,6 +15,7 @@ public class NoticeService {
 	private NoticeDaoImpl noticeDao;
 	
 	public List<Notice> noticeList(){
+		System.out.println(noticeDao.noticeList());
 		return noticeDao.noticeList();
 	}
 }
