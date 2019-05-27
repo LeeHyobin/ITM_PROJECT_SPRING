@@ -26,7 +26,7 @@ public class NoticeController {
 	@GetMapping("/list")
 	public String noticeList(Model model) {
 		model.addAttribute("list", noticeService.noticeList());
-		return "notice/noticeTest11";
+		return "notice/noticeList";
 	}
 	
 	// 공지사항 글읽기
